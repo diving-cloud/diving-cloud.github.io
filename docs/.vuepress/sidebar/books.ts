@@ -10,7 +10,7 @@ export const books = [
     icon: "database",
   },
   {
-    text: "搜索引擎",
+    text: "搜索引nn擎",
     link: "search-engine",
     icon: "search",
   },
