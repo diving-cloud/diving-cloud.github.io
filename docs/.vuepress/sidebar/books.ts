@@ -20,7 +20,7 @@ export const books = [
     icon: "java",
   },
   {
-    text: "软件质量",
+    text: "软件n质量",
     link: "software-quality",
     icon: "highavailable",
   },
