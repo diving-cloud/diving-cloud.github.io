@@ -1,23 +1,24 @@
 {
-  "name": "javaguide",
-  "version": "2.0.0-alpha.40",
-  "private": true,
-  "description": "javaguide",
+  "name": "vuepress-theme-hope-template",
+  "version": "2.0.0",
+  "description": "A project of vuepress-theme-hope",
   "license": "MIT",
-  "author": "Guide",
+  "type": "module",
   "scripts": {
-    "vite-build": "vuepress-vite build docs",
-    "vite-serve": "vuepress-vite dev docs",
-    "vite-clean-serve": "vuepress-vite dev docs --clean-cache",
-    "webpack-build": "vuepress-webpack build docs",
-    "webpack-clean-serve": "vuepress-webpack dev docs --clean-cache",
-    "webpack-serve": "vuepress-webpack dev docs"
+    "docs:build": "vuepress build docs",
+    "docs:clean-dev": "vuepress dev docs --clean-cache",
+    "docs:dev": "vuepress dev docs"
+  },
+  "devDependencies": {
+    "@vuepress/client": "2.0.0-beta.61",
+    "@vuepress/plugin-register-components": "2.0.0-beta.61",
+    "@vuepress/plugin-search": "2.0.0-beta.61",
+    "element-plus": "^2.2.32",
+    "vue": "^3.2.47",
+    "vuepress": "2.0.0-beta.61",
+    "vuepress-theme-hope": "2.0.0-beta.185"
   },
   "dependencies": {
-    "vuepress": "^2.0.0-beta.53",
-    "vuepress-theme-hope": "^2.0.0-beta.122",
-    "vuepress-vite": "2.0.0-beta.53",
-    "vuepress-webpack": "2.0.0-beta.53",
-    "@vuepress/plugin-search": "^2.0.0-beta.53"
+    "express": "^4.18.2"
   }
 }
