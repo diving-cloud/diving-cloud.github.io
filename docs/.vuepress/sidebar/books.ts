@@ -5,7 +5,7 @@ export const books = [
     icon: "computer",
   },
   {
-    text: "数据库",
+    text: "数c据库",
     link: "database",
     icon: "database",
   },
