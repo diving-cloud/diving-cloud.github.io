@@ -2,4 +2,4 @@
 User-agent:*
 Disallow:
 
-Sitemap: https://javaguide.cn/JavaGuide/sitemap.xml
+Sitemap: https://javaguide.cn/JavaGuide//sitemap.xml
