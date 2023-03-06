@@ -5,12 +5,12 @@ export const books = [
     icon: "computer",
   },
   {
-    text: "数c据库",
+    text: "数据库",
     link: "database",
     icon: "database",
   },
   {
-    text: "搜索引nn擎",
+    text: "搜索引擎",
     link: "search-engine",
     icon: "search",
   },
@@ -20,7 +20,7 @@ export const books = [
     icon: "java",
   },
   {
-    text: "软件n质量",
+    text: "软件质量",
     link: "software-quality",
     icon: "highavailable",
   },
