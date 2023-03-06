@@ -17,6 +17,8 @@ head:
 
 见名思意，根据读写分离的名字，我们就可以知道：**读写分离主要是为了将对数据库的读写操作分散到不同的数据库节点上。** 这样的话，就能够小幅提升写性能，大幅提升读性能。
 
+![image-20230306212726889](https://pics-cloud.oss-cn-beijing.aliyuncs.com/202303062127963.png)
+
 我简单画了一张图来帮助不太清楚读写分离的小伙伴理解。
 
 ![读写分离示意图](https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/github/javaguide/high-performance/read-and-write-separation-and-library-subtable/read-and-write-separation.png)
