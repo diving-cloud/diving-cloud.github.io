@@ -1,0 +1,1 @@
+import{_ as s,X as t,Y as n,Z as e}from"./framework-9b4b2ab3.js";const o={},_=e("p",null,[e("strong",null,"系统设计")],-1),c=[_];function l(r,a){return t(),n("div",null,c)}const u=s(o,[["render",l],["__file","system-design-questions.html.vue"]]);export{u as default};
