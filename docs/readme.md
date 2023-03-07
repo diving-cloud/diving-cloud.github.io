@@ -46,14 +46,3 @@ footer: |-
 - [《分布式相关面试题汇总》](https://t.1yb.co/GXLF)
 - [《图解计算机基础》](https://mp.weixin.qq.com/s?__biz=Mzg2OTA0Njk0OA==&mid=100021725&idx=1&sn=2db9664ca25363139a81691043e9fd8f&chksm=4ea19a1679d61300d8990f7e43bfc7f476577a81b712cf0f9c6f6552a8b219bc081efddb5c54#rd)
 
-## 公众号
-
-最新更新会第一时间同步在公众号，推荐关注！另外，公众号上有很多干货不会同步在线阅读网站。
-
-<div style="text-align:center">
-    <p>
-        <a href="https://javaguide.cn/about-the-author/zhishixingqiu-two-years.html">
-            <img src="https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/github/javaguide/gongzhonghaoxuanchuan.png" style="margin: 0 auto;" />
-        </a>
-    </p>
-</div>
