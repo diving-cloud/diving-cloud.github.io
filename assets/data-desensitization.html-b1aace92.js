@@ -1,0 +1,1 @@
+import{_ as e,X as t,Y as s,Z as n}from"./framework-f0219f66.js";const a={},o=n("p",null,"数据脱敏说的就是我们根据特定的规则对敏感信息数据进行变形，比如我们把手机号、身份证号某些位数使用 * 来代替。",-1),_=[o];function c(i,r){return t(),s("div",null,_)}const d=e(a,[["render",c],["__file","data-desensitization.html.vue"]]);export{d as default};

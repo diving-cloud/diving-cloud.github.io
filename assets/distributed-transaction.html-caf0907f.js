@@ -1,1 +1,0 @@
-import{_ as e,X as n,Y as s,Z as t}from"./framework-9b4b2ab3.js";const o={},c=t("p",null,[t("strong",null,"分布式事务")],-1),r=[c];function _(a,i){return n(),s("div",null,r)}const d=e(o,[["render",_],["__file","distributed-transaction.html.vue"]]);export{d as default};

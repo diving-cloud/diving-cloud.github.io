@@ -1,1 +1,0 @@
-import{_ as s,X as t,Y as c,Z as e}from"./framework-9b4b2ab3.js";const n={},o=e("p",null,[e("strong",null,"Elasticsearch")],-1),a=[o];function l(r,_){return t(),c("div",null,a)}const u=s(n,[["render",l],["__file","elasticsearch-questions-01.html.vue"]]);export{u as default};
