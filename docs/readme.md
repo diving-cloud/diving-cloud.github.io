@@ -29,14 +29,8 @@ footer: |-
 
 - [项目介绍](./javaguide/intro.md)
 - [网站历史](./javaguide/history.md)
-- [贡献指南](./javaguide/contribution-guideline.md)
-- [常见问题](./javaguide/faq.md)
 
-## 关于作者
 
-- [我曾经也是网瘾少年](./about-the-author/internet-addiction-teenager.md)
-- [害，毕业三年了！](./about-the-author/my-college-life.md)
-- [我的知识星球快 3 岁了！](./about-the-author/zhishixingqiu-two-years.md)
 
 ## PDF
 
