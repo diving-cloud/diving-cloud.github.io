@@ -19,7 +19,7 @@ export const sidebarConfig = sidebar({
   // 必须放在最后面
   "/": [
     {
-      text: "面试准备",
+      text: "启航",
       icon: "interview",
       collapsible: true,
       prefix: "interview-preparation/",
@@ -311,43 +311,6 @@ export const sidebarConfig = sidebar({
       ],
     },
     {
-      text: "开发工具",
-      icon: "tool",
-      prefix: "tools/",
-      collapsible: true,
-      children: [
-        {
-          text: "Maven",
-          icon: "configuration",
-          prefix: "maven/",
-          children: ["maven-core-concepts"],
-        },
-        {
-          text: "Gradle",
-          icon: "gradle",
-          prefix: "gradle/",
-          children: ["gradle-core-concepts"],
-        },
-        {
-          text: "Git",
-          icon: "git",
-          prefix: "git/",
-          children: ["git-intro", "github-tips"],
-        },
-        {
-          text: "Docker",
-          icon: "docker1",
-          prefix: "docker/",
-          children: ["docker-intro", "docker-in-action"],
-        },
-        {
-          text: "IDEA",
-          icon: "intellijidea",
-          link: "https://gitee.com/SnailClimb/awesome-idea-tutorial",
-        },
-      ],
-    },
-    {
       text: "常用框架",
       prefix: "system-design/framework/",
       icon: "framework",
@@ -496,5 +459,43 @@ export const sidebarConfig = sidebar({
         "performance-test",
       ],
     },
+    {
+      text: "开发工具",
+      icon: "tool",
+      prefix: "tools/",
+      collapsible: true,
+      children: [
+        {
+          text: "Maven",
+          icon: "configuration",
+          prefix: "maven/",
+          children: ["maven-core-concepts"],
+        },
+        {
+          text: "Gradle",
+          icon: "gradle",
+          prefix: "gradle/",
+          children: ["gradle-core-concepts"],
+        },
+        {
+          text: "Git",
+          icon: "git",
+          prefix: "git/",
+          children: ["git-intro", "github-tips"],
+        },
+        {
+          text: "Docker",
+          icon: "docker1",
+          prefix: "docker/",
+          children: ["docker-intro", "docker-in-action"],
+        },
+        {
+          text: "IDEA",
+          icon: "intellijidea",
+          link: "https://gitee.com/SnailClimb/awesome-idea-tutorial",
+        },
+      ],
+    },
+
   ],
 });

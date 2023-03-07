@@ -9,7 +9,7 @@ export const themeConfig = hopeTheme({
     name: "Guide",
     url: "https://javaguide.cn/article/",
   },
-  repo: "https://github.com/Snailclimb/JavaGuide",
+  repo: "https://github.com/diving-cloud/diving-cloud.github.io",
   docsDir: "docs",
   iconAssets: "//at.alicdn.com/t/c/font_2922463_9ir10garej4.css",
   navbar: navbarConfig,
