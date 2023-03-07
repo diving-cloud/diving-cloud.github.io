@@ -9,6 +9,8 @@ tag:
 >
 > 原文地址:https://www.weiweiblog.cn/13string/
 
+## 代码随想录
+地址：https://www.programmercarl.com/
 
 ## 1. KMP 算法
 
