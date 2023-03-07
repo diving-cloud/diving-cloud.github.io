@@ -22,9 +22,9 @@ JMM（Java 内存模型）相关的问题比较多，也比较重要，于是我
 
 在 Java 中，`volatile` 关键字可以保证变量的可见性，如果我们将变量声明为 **`volatile`** ，这就指示 JVM，这个变量是共享且不稳定的，每次使用它都到主存中进行读取。
 
-![](https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/github/javaguide/java/concurrent/jmm.png)
+![](https://pics-cloud.oss-cn-beijing.aliyuncs.com/jmm.png)
 
-![JMM(Java 内存模型)强制在主存中进行读取](https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/github/javaguide/java/concurrent/jmm2.png)
+![JMM(Java 内存模型)强制在主存中进行读取](https://pics-cloud.oss-cn-beijing.aliyuncs.com/jmm2.png)
 
 `volatile` 关键字其实并非是 Java 语言特有的，在 C 语言里也有，它最原始的意义就是禁用 CPU 缓存。如果我们将一个变量使用 `volatile` 修饰，这就指示 编译器，这个变量是共享且不稳定的，每次使用它都到主存中进行读取。
 
@@ -378,7 +378,7 @@ public class SynchronizedDemo {
 
 通过 JDK 自带的 `javap` 命令查看 `SynchronizedDemo` 类的相关字节码信息：首先切换到类的对应目录执行 `javac SynchronizedDemo.java` 命令生成编译后的 .class 文件，然后执行`javap -c -s -v -l SynchronizedDemo.class`。
 
-![synchronized关键字原理](https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019-6/synchronized关键字原理.png)
+20230307225884![synchronized关键字原理](https://pics-cloud.oss-cn-beijing.aliyuncs.com/202303072258409.png)
 
 从上面我们可以看出：**`synchronized` 同步语句块的实现使用的是 `monitorenter` 和 `monitorexit` 指令，其中 `monitorenter` 指令指向同步代码块的开始位置，`monitorexit` 指令则指明同步代码块的结束位置。**
 
@@ -390,11 +390,11 @@ public class SynchronizedDemo {
 
 在执行`monitorenter`时，会尝试获取对象的锁，如果锁的计数器为 0 则表示锁可以被获取，获取后将锁计数器设为 1 也就是加 1。
 
-![执行 monitorenter 获取锁](https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/github/javaguide/java/concurrent/synchronized-get-lock-code-block.png)
+![执行 monitorenter 获取锁](https://pics-cloud.oss-cn-beijing.aliyuncs.com/202303072259538.png)
 
 对象锁的的拥有者线程才可以执行 `monitorexit` 指令来释放锁。在执行 `monitorexit` 指令后，将锁计数器设为 0，表明锁被释放，其他线程可以尝试获取锁。
 
-![执行 monitorexit 释放锁](https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/github/javaguide/java/concurrent/synchronized-release-lock-block.png)
+![执行 monitorexit 释放锁](https://pics-cloud.oss-cn-beijing.aliyuncs.com/synchronized-release-lock-block.png)
 
 如果获取对象锁失败，那当前线程就要阻塞等待，直到锁被另外一个线程释放为止。
 
@@ -409,7 +409,7 @@ public class SynchronizedDemo2 {
 
 ```
 
-![synchronized关键字原理](https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019-6/synchronized关键字原理2.png)
+![synchronized关键字原理](https://pics-cloud.oss-cn-beijing.aliyuncs.com/synchronized%E5%85%B3%E9%94%AE%E5%AD%97%E5%8E%9F%E7%90%862.png)
 
 `synchronized` 修饰的方法并没有 `monitorenter` 指令和 `monitorexit` 指令，取得代之的确实是 `ACC_SYNCHRONIZED` 标识，该标识指明了该方法是一个同步方法。JVM 通过该 `ACC_SYNCHRONIZED` 访问标志来辨别一个方法是否声明为同步方法，从而执行相应的同步调用。
 
@@ -455,7 +455,7 @@ public class ReentrantLock implements Lock, java.io.Serializable {}
 
 `ReentrantLock` 里面有一个内部类 `Sync`，`Sync` 继承 AQS（`AbstractQueuedSynchronizer`），添加锁和释放锁的大部分操作实际上都是在 `Sync` 中实现的。`Sync` 有公平锁 `FairSync` 和非公平锁 `NonfairSync` 两个子类。
 
-![](https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/github/javaguide/java/concurrent/reentrantlock-class-diagram.png)
+![](https://pics-cloud.oss-cn-beijing.aliyuncs.com/reentrantlock-class-diagram.png)
 
 `ReentrantLock` 默认使用非公平锁，也可以通过构造器来显示的指定使用公平锁。
 
@@ -548,7 +548,7 @@ public interface ReadWriteLock {
 
 和 `ReentrantLock` 一样，`ReentrantReadWriteLock` 底层也是基于 AQS 实现的。
 
-![](https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/github/javaguide/java/concurrent/reentrantreadwritelock-class-diagram.png)
+![](https://pics-cloud.oss-cn-beijing.aliyuncs.com/reentrantreadwritelock-class-diagram.png)
 
 `ReentrantReadWriteLock` 也支持公平锁和非公平锁，默认使用非公平锁，可以通过构造器来显示的指定。
 
