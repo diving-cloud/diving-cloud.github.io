@@ -425,6 +425,7 @@ export const sidebarConfig = sidebar({
       prefix: "high-performance/",
       collapsible: true,
       children: [
+        "performance-optimize",
         "read-and-write-separation-and-library-subtable",
         "load-balancing",
         "cdn",
