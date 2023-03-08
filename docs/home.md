@@ -3,37 +3,15 @@ icon: creative
 title: JavaGuide（Java学习&&面试指南）
 ---
 
-::: tip 友情提示
-- **面试专版** ：
-- **知识星球** ：
-:::
-
 
 <div align="center">
     <p>
         <a href="https://github.com/Snailclimb/JavaGuide" target="_blank">
-            <img src="https://img-blog.csdnimg.cn/img_convert/1c00413c65d1995993bf2b0daf7b4f03.png#pic_center" width="" />
+            <img src="https://pics-cloud.oss-cn-beijing.aliyuncs.com/202303082239642.jpg" width="" />
         </a>
     </p>
-    <p>
-        <a href="https://javaguide.cn/"><img src="https://img.shields.io/badge/阅读-read-brightgreen.svg" alt="阅读" /></a>
-        <img src="https://img.shields.io/github/stars/Snailclimb/JavaGuide" alt="stars" />
-        <img src="https://img.shields.io/github/forks/Snailclimb/JavaGuide" alt="forks" />
-        <img src="https://img.shields.io/github/issues/Snailclimb/JavaGuide" alt="issues" />
-    </p>
-    <p>
-        <a href="https://github.com/Snailclimb/JavaGuide">Github</a> |
-        <a href="https://gitee.com/SnailClimb/JavaGuide">Gitee</a>
-    </p>  
 </div>
 
-<div style="text-align:center">
-    <p>
-        <a href="https://javaguide.cn/about-the-author/zhishixingqiu-two-years.html">
-            <img src="https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/github/javaguide/gongzhonghaoxuanchuan.png" style="margin: 0 auto;" />
-        </a>
-    </p>
-</div>
 
 ## 项目相关
 
