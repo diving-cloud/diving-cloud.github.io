@@ -225,7 +225,7 @@ CAP is also the combination of the initials Consistency, Availability, and Parti
 
 **BASE** is an acronym for **Basically Available**, **Soft-state**, and **Eventually Consistent**. The BASE theory is the result of a trade-off between consistency and availability in the CAP, and is derived from a summary of distributed practices for large-scale Internet systems, evolving from the CAP theorem, which significantly reduces our system requirements.
 
-Related reading: [CAP Theory and BASE Theory Explained](docs/distributed-system/theorem&algorithm&protocol/cap&base-theorem.md)
+Related reading: [CAP Theory and BASE Theory Explained](docs/distributed-system/theorem-algorithm-protocol/cap&base-theorem.md)
 
 ### Paxos algorithm and Raft algorithm
 
