@@ -18,8 +18,8 @@ footer: |-
 
 <div align="center">
      <p>
-        <a href="https://www.yuque.com/docs/share/8a30ffb5-83f3-40f9-baf9-38de68b906dc">
-            <img src="https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/xingqiu/xingqiu.png" style="margin: 0 auto; width: 850px;" />
+        <a href="">
+            <img src="https://pics-cloud.oss-cn-beijing.aliyuncs.com/202303082239642.jpg" style="margin: 0 auto; width: 850px;" />
         </a>
     </p>
 </div>
