@@ -1,7 +1,7 @@
 ---
 home: true
 icon: home
-title: Java 面试指南
+title: Java 学习指南
 heroImage:
 heroText: JavaGuide
 tagline: 「Java学习+面试指南」涵盖大部分 Java 程序员所需要掌握的核心知识！
