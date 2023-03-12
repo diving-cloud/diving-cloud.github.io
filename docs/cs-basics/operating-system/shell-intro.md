@@ -28,14 +28,14 @@ Shell 编程在我们的日常开发工作中非常实用，目前 Linux 系统�
 
 另外，了解 shell 编程也是大部分互联网公司招聘后端开发人员的要求。下图是我截取的一些知名互联网公司对于 Shell 编程的要求。
 
-![大型互联网公司对于shell编程技能的要求](https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/18-11-16/60190220.jpg)
+![大型互联网公司对于shell编程技能的要求](https://pics-cloud.oss-cn-beijing.aliyuncs.com/202303122230798.jpeg)
 
 ### 什么是 Shell？
 
 简单来说“Shell 编程就是对一堆 Linux 命令的逻辑化处理”。
 
 W3Cschool 上的一篇文章是这样介绍 Shell 的，如下图所示。
-![什么是 Shell？](https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/18-11-26/19456505.jpg)
+![什么是 Shell？](https://pics-cloud.oss-cn-beijing.aliyuncs.com/202303122230470.jpeg)
 
 ### Shell 编程的 Hello World
 
@@ -59,7 +59,7 @@ shell 中 # 符号表示注释。**shell 的第一行比较特殊，一般都会
 
 (4) 运行脚本:`./helloworld.sh` 。（注意，一定要写成 `./helloworld.sh` ，而不是 `helloworld.sh` ，运行其它二进制的程序也一样，直接写 `helloworld.sh` ，linux 系统会去 PATH 里寻找有没有叫 helloworld.sh 的，而只有 /bin, /sbin, /usr/bin，/usr/sbin 等在 PATH 里，你的当前目录通常不在 PATH 里，所以写成 `helloworld.sh` 是会找不到命令的，要用`./helloworld.sh` 告诉系统说，就在当前目录找。）
 
-![shell 编程Hello World](https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/18-11-16/55296212.jpg)
+![shell 编程Hello World](https://pics-cloud.oss-cn-beijing.aliyuncs.com/202303122230419.jpeg)
 
 ## Shell 变量
 
@@ -97,7 +97,7 @@ echo $hello
 echo  "helloworld!"
 ```
 
-![使用自己定义的变量](https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/18-11-17/19835037.jpg)
+![使用自己定义的变量](https://pics-cloud.oss-cn-beijing.aliyuncs.com/202303122230409.jpeg)
 
 **Shell 编程中的变量名的命名的注意事项：**
 
@@ -161,7 +161,7 @@ echo $greeting_2  $greeting_3
 
 输出结果：
 
-![输出结果](https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/18-11-17/51148933.jpg)
+![输出结果](https://pics-cloud.oss-cn-beijing.aliyuncs.com/202303122230405.jpeg)
 
 **获取字符串长度：**
 

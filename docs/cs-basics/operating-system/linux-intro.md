@@ -14,7 +14,7 @@ head:
 
 ## 从认识操作系统开始
 
-![](https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/2020-8/image-20200807161118901.png)
+![](https://pics-cloud.oss-cn-beijing.aliyuncs.com/202303122228356.png)
 
 正式开始 Linux 之前，简单花一点点篇幅科普一下操作系统相关的内容。
 
@@ -29,7 +29,7 @@ head:
 
 > 内核（Kernel）在后文中会提到。
 
-![Kernel_Layout](https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/2020-8/Kernel_Layout.png)
+![Kernel_Layout](https://pics-cloud.oss-cn-beijing.aliyuncs.com/202303122228734.png)
 
 ### 操作系统简单分类
 
@@ -39,7 +39,7 @@ head:
 
 _玩玩电脑游戏还是必须要有 Windows 的，所以我现在是一台 Windows 用于玩游戏，一台 Mac 用于平时日常开发和学习使用。_
 
-![windows](./images/windows.png)
+![windows](https://pics-cloud.oss-cn-beijing.aliyuncs.com/202303122228655.png)
 
 #### Unix
 
@@ -47,7 +47,7 @@ _玩玩电脑游戏还是必须要有 Windows 的，所以我现在是一台 Win
 
 目前这款操作系统已经逐渐逐渐退出操作系统的舞台。
 
-![unix](./images/unix.png)
+![unix](https://pics-cloud.oss-cn-beijing.aliyuncs.com/202303122228577.png)
 
 #### Linux
 
@@ -57,13 +57,13 @@ _玩玩电脑游戏还是必须要有 Windows 的，所以我现在是一台 Win
 >
 > **很多人更倾向使用 “GNU/Linux” 一词来表达人们通常所说的 “Linux”。**
 
-![linux](./images/linux.png)
+![linux](https://pics-cloud.oss-cn-beijing.aliyuncs.com/202303122228315.png)
 
 #### Mac OS
 
 苹果自家的操作系统，编程体验和 Linux 相当，但是界面、软件生态以及用户体验各方面都要比 Linux 操作系统更好。
 
-![macos](./images/macos.png)
+![macos](https://pics-cloud.oss-cn-beijing.aliyuncs.com/202303122228978.png)
 
 ### 操作系统的内核（Kernel）
 
@@ -95,7 +95,7 @@ _玩玩电脑游戏还是必须要有 Windows 的，所以我现在是一台 Win
 
 下图清晰说明了应用程序、内核、CPU 这三者的关系。
 
-![Kernel_Layout](https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/2020-8/Kernel_Layout.png)
+![Kernel_Layout](https://pics-cloud.oss-cn-beijing.aliyuncs.com/202303122228977.png)
 
 ### 系统调用
 
@@ -122,7 +122,7 @@ _玩玩电脑游戏还是必须要有 Windows 的，所以我现在是一台 Win
 
 我在网上找了一个图，通过这个图可以很清晰的说明用户程序、系统调用、内核和硬件之间的关系。（_太难了~木有自己画_）
 
-![](https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/2020-8/L181kk2Eou-compress.jpg)
+![](https://pics-cloud.oss-cn-beijing.aliyuncs.com/202303122228261.jpeg)
 
 ## 初探 Linux
 
@@ -134,7 +134,7 @@ _玩玩电脑游戏还是必须要有 Windows 的，所以我现在是一台 Win
 - **Linux 本质是指 Linux 内核** ： 严格来讲，Linux 这个词本身只表示 Linux 内核，单独的 Linux 内核并不能成为一个可以正常工作的操作系统。所以，就有了各种 Linux 发行版。
 - **Linux 之父(林纳斯·本纳第克特·托瓦兹 Linus Benedict Torvalds)** ： 一个编程领域的传奇式人物，真大佬！我辈崇拜敬仰之楷模。他是 **Linux 内核** 的最早作者，随后发起了这个开源项目，担任 Linux 内核的首要架构师。他还发起了 Git 这个开源项目，并为主要的开发者。
 
-![Linux](./images/Linux之父.png)
+![Linux](https://pics-cloud.oss-cn-beijing.aliyuncs.com/202303122228207.png)
 
 ### Linux 诞生
 

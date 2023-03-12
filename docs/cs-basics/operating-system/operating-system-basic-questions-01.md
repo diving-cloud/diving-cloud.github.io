@@ -42,7 +42,7 @@ head:
 3. **操作系统存在屏蔽了硬件层的复杂性。** 操作系统就像是硬件使用的负责人，统筹着各种相关事项。
 4. **操作系统的内核（Kernel）是操作系统的核心部分，它负责系统的内存管理，硬件设备的管理，文件系统的管理以及应用程序的管理**。 内核是连接应用程序和硬件的桥梁，决定着系统的性能和稳定性。
 
-![Kernel_Layout](https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/2020-8/Kernel_Layout.png)
+![Kernel_Layout](https://pics-cloud.oss-cn-beijing.aliyuncs.com/202303122226113.png)
 
 ### 系统调用
 
@@ -77,7 +77,7 @@ head:
 
 🙋 **我：** 好的！ 下图是 Java 内存区域，我们从 JVM 的角度来说一下线程和进程之间的关系吧！
 
-![Java 运行时数据区域（JDK1.8 之后）](https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/github/javaguide/java/jvm/java-runtime-data-areas-jdk1.8.png)
+![Java 运行时数据区域（JDK1.8 之后）](https://pics-cloud.oss-cn-beijing.aliyuncs.com/202303122227186.png)
 
 从上图可以看出：一个进程中可以有多个线程，多个线程共享进程的**堆**和**方法区 (JDK1.8 之后的元空间)**资源，但是每个线程有自己的**程序计数器**、**虚拟机栈** 和 **本地方法栈**。
 
@@ -97,7 +97,7 @@ head:
 
 > 订正：下图中 running 状态被 interrupt 向 ready 状态转换的箭头方向反了。
 
-![process-state](https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019-11/d38202593012b457debbcd74994c6292.png)
+![process-state](https://pics-cloud.oss-cn-beijing.aliyuncs.com/202303122227185.png)
 
 ### 进程间的通信方式
 
@@ -223,7 +223,7 @@ head:
 
 图中 2-21 是**进程-资源分配图**的一个例子，其中共有三个资源类，每个进程的资源占有和申请情况已清楚地表示在图中。在这个例子中，由于存在 **占有和等待资源的环路** ，导致一组进程永远处于等待资源的状态，发生了 **死锁**。
 
-![进程-资源分配图](https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/github/javaguide/cs-basics/operating-system/process-resource-allocation-diagram.jpg)
+![进程-资源分配图](https://pics-cloud.oss-cn-beijing.aliyuncs.com/202303122227118.jpeg)
 
 进程-资源分配图中存在环路并不一定是发生了死锁。因为循环等待资源仅仅是死锁发生的必要条件，而不是充分条件。图 2-22 便是一个有环路而无死锁的例子。虽然进程 P1 和进程 P3 分别占用了一个资源 R1 和一个资源 R2，并且因为等待另一个资源 R2 和另一个资源 R1 形成了环路，但进程 P2 和进程 P4 分别占有了一个资源 R1 和一个资源 R2，它们申请的资源得到了满足，在有限的时间里会归还资源，于是进程 P1 或 P3 都能获得另一个所需的资源，环路自动解除，系统也就不存在死锁状态了。
 
@@ -333,7 +333,7 @@ head:
 
 现代处理器使用的是一种称为 **虚拟寻址(Virtual Addressing)** 的寻址方式。**使用虚拟寻址，CPU 需要将虚拟地址翻译成物理地址，这样才能访问到真实的物理内存。** 实际上完成虚拟地址转换为物理地址的硬件是 CPU 中含有一个被称为 **内存管理单元（Memory Management Unit, MMU）** 的硬件。如下图所示：
 
-![MMU_principle_updated](https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019-11/2b27dac8cc647f8aac989da2d1166db2.png)
+![MMU_principle_updated](https://pics-cloud.oss-cn-beijing.aliyuncs.com/202303122227048.png)
 
 **为什么要有虚拟地址空间呢？**
 
