@@ -108,7 +108,7 @@ tag:
 
 图解（图片来源：《图解 HTTP》）：
 
-<img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019-11/url输入到展示出来的过程.jpg" style="zoom:50%; " />
+<img src="https://pics-cloud.oss-cn-beijing.aliyuncs.com/202303122222253.jpeg" style="zoom:50%; " />
 
 > 上图有一个错误，请注意，是 OSPF 不是 OPSF。 OSPF（Open Shortest Path First，ospf）开放最短路径优先协议, 是由 Internet 工程任务组开发的路由选择协议
 
@@ -130,7 +130,7 @@ tag:
 
 HTTP 状态码用于描述 HTTP 请求的结果，比如2xx 就代表请求被成功处理。
 
-![HTTP 状态码](https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019/7/状态码.png)
+![HTTP 状态码](https://pics-cloud.oss-cn-beijing.aliyuncs.com/202303122223023.png)
 
 关于 HTTP 状态码更详细的总结，可以看我写的这篇文章：[HTTP 常见状态码总结（应用层）](./http-status-codes.md)。
 
@@ -162,7 +162,7 @@ HTTP 是一种不保存状态，即无状态（stateless）协议。也就是说
 
 最常用的就是利用 URL 重写把 Session ID 直接附加在 URL 路径的后面。
 
-![HTTP是无状态协议](https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019-6/HTTP是无状态的.png)
+![HTTP是无状态协议](https://pics-cloud.oss-cn-beijing.aliyuncs.com/202303122223398.png)
 
 ### URI 和 URL 的区别是什么?
 
@@ -177,7 +177,7 @@ URI 的作用像身份证号一样，URL 的作用更像家庭住址一样。URL
 
 MAC 地址的全称是 **媒体访问控制地址（Media Access Control Address）**。如果说，互联网中每一个资源都由 IP 地址唯一标识（IP 协议内容），那么一切网络设备都由 MAC 地址唯一标识。
 
-![路由器的背面就会注明 MAC 位址](./images/arp/2008410143049281.png)
+![路由器的背面就会注明 MAC 位址](https://pics-cloud.oss-cn-beijing.aliyuncs.com/202303122223967.png)
 
 可以理解为，MAC 地址是一个网络设备真正的身份证号，IP 地址只是一种不重复的定位方式（比如说住在某省某市某街道的张三，这种逻辑定位是 IP 地址，他的身份证号才是他的 MAC 地址），也可以理解为 MAC 地址是身份证号，IP 地址是邮政地址。MAC 地址也有一些别称，如 LAN 地址、物理地址、以太网地址等。
 
