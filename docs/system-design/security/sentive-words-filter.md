@@ -26,7 +26,7 @@ tag:
 
 我们构造出来的敏感词 Trie 树就是下面这样的：
 
-![](./images/sentive-words-filter/trie.png)
+![](https://pics-cloud.oss-cn-beijing.aliyuncs.com/202303122336025.png)
 
 当我们要查找对应的字符串“东京热”的话，我们会把这个字符串切割成单个的字符“东”、“京”、“热”，然后我们从 Trie 树的根节点开始匹配。
 
@@ -62,7 +62,7 @@ AC 自动机算法使用 Trie 树来存放模式串的前缀，通过失败匹�
 
 [Hutool](https://hutool.cn/docs/#/dfa/%E6%A6%82%E8%BF%B0) 提供了 DFA 算法的实现：
 
-![](./images/sentive-words-filter/hutool-dfa.png)
+![](https://pics-cloud.oss-cn-beijing.aliyuncs.com/202303122336430.png)
 
 ```java
 WordTree wordTree = new WordTree();
