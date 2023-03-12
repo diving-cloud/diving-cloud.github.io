@@ -21,7 +21,7 @@ head:
 
 关系型数据库中，我们的数据都被存放在了各种表中（比如用户表），表中的每一行就存放着一条数据（比如一个用户的信息）。
 
-![关系型数据库表关系](https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/java-guide-blog/5e3c1a71724a38245aa43b02_99bf70d46cc247be878de9d3a88f0c44.png)
+![关系型数据库表关系](https://pics-cloud.oss-cn-beijing.aliyuncs.com/202303122238437.png)
 
 大部分关系型数据库都使用 SQL 来操作数据库中的数据。并且，大部分关系型数据库都支持事务的四大特性(ACID)。
 
@@ -47,7 +47,7 @@ SQL 可以帮助我们：
 
 ### 什么是 MySQL？
 
-![](https://img-blog.csdnimg.cn/20210327143351823.png)
+![](https://pics-cloud.oss-cn-beijing.aliyuncs.com/202303122238125.png)
 
 **MySQL 是一种关系型数据库，主要用于持久化存储我们的系统中的一些数据比如用户信息。**
 
@@ -74,7 +74,7 @@ MySQL 主要具有下面这些优点：
 
 下图是 MySQL 的一个简要架构图，从下图你可以很清晰的看到客户端的一条 SQL 语句在 MySQL 内部是如何执行的。
 
-![](https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/javaguide/13526879-3037b144ed09eb88.png)
+![](https://pics-cloud.oss-cn-beijing.aliyuncs.com/202303122238090.png)
 
 从上图可以看出， MySQL 主要由下面几部分构成：
 
@@ -93,7 +93,7 @@ MySQL 核心在于存储引擎，想要深入学习 MySQL，必定要深入研�
 
 MySQL 支持多种存储引擎，你可以通过 `show engines` 命令来查看 MySQL 支持的所有存储引擎。
 
-![查看 MySQL 提供的所有存储引擎](https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/github/javaguide/mysql/image-20220510105408703.png)
+![查看 MySQL 提供的所有存储引擎](https://pics-cloud.oss-cn-beijing.aliyuncs.com/202303122238550.png)
 
 从上图我们可以查看出， MySQL 当前默认的存储引擎是 InnoDB。并且，所有的存储引擎中只有 InnoDB 是事务性存储引擎，也就是说只有 InnoDB 支持事务。
 
@@ -115,7 +115,7 @@ MySQL 5.5.5 之前，MyISAM 是 MySQL 的默认存储引擎。5.5.5 版本之后
 
 你也可以通过 `show variables like '%storage_engine%'` 命令直接查看 MySQL 当前默认的存储引擎。
 
-![查看 MySQL 当前默认的存储引擎](https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/github/javaguide/mysql/image-20220510105837786.png)
+![查看 MySQL 当前默认的存储引擎](https://pics-cloud.oss-cn-beijing.aliyuncs.com/202303122238565.png)
 
 如果你只想查看数据库中某个表使用的存储引擎的话，可以使用 `show table status from db_name where name='table_name'`命令。
 
@@ -126,7 +126,7 @@ MySQL 5.5.5 之前，MyISAM 是 MySQL 的默认存储引擎。5.5.5 版本之后
 - InnoDB 存储引擎详细介绍：https://dev.mysql.com/doc/refman/8.0/en/innodb-storage-engine.html 。
 - 其他存储引擎详细介绍：https://dev.mysql.com/doc/refman/8.0/en/storage-engines.html 。
 
-![](https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/github/javaguide/mysql/image-20220510155143458.png)
+![](https://pics-cloud.oss-cn-beijing.aliyuncs.com/202303122238819.png)
 
 ### MySQL 存储引擎架构了解吗？
 
@@ -138,7 +138,7 @@ MySQL 官方文档也有介绍到如何编写一个自定义存储引擎，地�
 
 ### MyISAM 和 InnoDB 有什么区别？
 
-![](https://img-blog.csdnimg.cn/20210327145248960.png)
+![](https://pics-cloud.oss-cn-beijing.aliyuncs.com/202303122239810.png)
 
 MySQL 5.5 之前，MyISAM 引擎是 MySQL 的默认存储引擎，可谓是风光一时。
 
@@ -170,7 +170,7 @@ MyISAM 不支持，而 InnoDB 支持。
 
 阿里的《Java 开发手册》也是明确规定禁止使用外键的。
 
-![](https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/github/javaguide/mysql/image-20220510090309427.png)
+![](https://pics-cloud.oss-cn-beijing.aliyuncs.com/202303122239729.png)
 
 不过，在代码中进行约束的话，对程序员的能力要求更高，具体是否要采用外键还是要根据你的项目实际情况而定。
 
@@ -200,7 +200,7 @@ InnoDB 引擎中，其数据文件本身就是索引文件。相比 MyISAM，索
 
 InnoDB 的性能比 MyISAM 更强大，不管是在读写混合模式下还是只读模式下，随着 CPU 核数的增加，InnoDB 的读写能力呈线性增长。MyISAM 因为读写不能并发，它的处理能力跟核数没关系。
 
-![InnoDB 和 MyISAM 性能对比](https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/github/javaguide/mysql/innodb-myisam-performance-comparison.png)
+![InnoDB 和 MyISAM 性能对比](https://pics-cloud.oss-cn-beijing.aliyuncs.com/202303122239164.png)
 
 **总结** ：
 
@@ -301,7 +301,7 @@ select sql_no_cache count(*) from usr;
 
 事务会把这两个操作就可以看成逻辑上的一个整体，这个整体包含的操作要么都成功，要么都要失败。这样就不会出现小明余额减少而小红的余额却并没有增加的情况。
 
-![事务示意图](https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/github/javaguide/mysql/%E4%BA%8B%E5%8A%A1%E7%A4%BA%E6%84%8F%E5%9B%BE.png)
+![事务示意图](https://pics-cloud.oss-cn-beijing.aliyuncs.com/202303122239598.png)
 
 ### 何谓数据库事务？
 
@@ -322,11 +322,11 @@ SQL1,SQL2...
 COMMIT;
 ```
 
-![数据库事务示意图](https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/github/javaguide/mysql/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BA%8B%E5%8A%A1%E7%A4%BA%E6%84%8F%E5%9B%BE.png)
+![数据库事务示意图](https://pics-cloud.oss-cn-beijing.aliyuncs.com/202303122239730.png)
 
 另外，关系型数据库（例如：`MySQL`、`SQL Server`、`Oracle` 等）事务都有 **ACID** 特性：
 
-![ACID](https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/github/javaguide/mysql/ACID.png)
+![ACID](https://pics-cloud.oss-cn-beijing.aliyuncs.com/202303122239645.png)
 
 1. **原子性**（`Atomicity`） ： 事务是最小的执行单位，不允许分割。事务的原子性确保动作要么全部完成，要么完全不起作用；
 2. **一致性**（`Consistency`）： 执行事务前后，数据保持一致，例如转账业务中，无论事务是否成功，转账者和收款人的总额应该是不变的；
@@ -335,7 +335,7 @@ COMMIT;
 
 🌈 这里要额外补充一点：**只有保证了事务的持久性、原子性、隔离性之后，一致性才能得到保障。也就是说 A、I、D 是手段，C 是目的！** 想必大家也和我一样，被 ACID 这个概念被误导了很久! 我也是看周志明老师的公开课[《周志明的软件架构课》](https://time.geekbang.org/opencourse/intro/100064201)才搞清楚的（多看好书！！！）。
 
-![AID->C](https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/github/javaguide/mysql/AID-%3EC.png)
+![AID->C](https://pics-cloud.oss-cn-beijing.aliyuncs.com/202303122239332.png)
 
 另外，DDIA 也就是 [《Designing Data-Intensive Application（数据密集型应用系统设计）》](https://book.douban.com/subject/30329536/) 的作者在他的这本书中如是说：
 
@@ -348,7 +348,7 @@ COMMIT;
 
 《Designing Data-Intensive Application（数据密集型应用系统设计）》这本书强推一波，值得读很多遍！豆瓣有接近 90% 的人看了这本书之后给了五星好评。另外，中文翻译版本已经在 Github 开源，地址：[https://github.com/Vonng/ddia](https://github.com/Vonng/ddia) 。
 
-![](https://img-blog.csdnimg.cn/20210526162552353.png)
+![](https://pics-cloud.oss-cn-beijing.aliyuncs.com/202303122239275.png)
 
 ### 并发事务带来了哪些问题?
 
@@ -360,7 +360,7 @@ COMMIT;
 
 例如：事务 1 读取某表中的数据 A=20，事务 1 修改 A=A-1，事务 2 读取到 A = 19,事务 1 回滚导致对 A 的修改并为提交到数据库， A 的值还是 20。
 
-![脏读](./images/concurrency-consistency-issues-dirty-reading.png)
+![脏读](https://pics-cloud.oss-cn-beijing.aliyuncs.com/202303122239622.png)
 
 #### 丢失修改（Lost to modify）
 
@@ -368,7 +368,7 @@ COMMIT;
 
 例如：事务 1 读取某表中的数据 A=20，事务 2 也读取 A=20，事务 1 先修改 A=A-1，事务 2 后来也修改 A=A-1，最终结果 A=19，事务 1 的修改被丢失。
 
-![丢失修改](./images/concurrency-consistency-issues-missing-modifications.png)
+![丢失修改](https://pics-cloud.oss-cn-beijing.aliyuncs.com/202303122239449.png)
 
 #### 不可重复读（Unrepeatable read）
 
@@ -376,7 +376,7 @@ COMMIT;
 
 例如：事务 1 读取某表中的数据 A=20，事务 2 也读取 A=20，事务 1 修改 A=A-1，事务 2 再次读取 A =19，此时读取的结果和第一次读取的结果不同。
 
-![不可重复读](./images/concurrency-consistency-issues-unrepeatable-read.png)
+![不可重复读](https://pics-cloud.oss-cn-beijing.aliyuncs.com/202303122239330.png)
 
 #### 幻读（Phantom read）
 
@@ -384,7 +384,7 @@ COMMIT;
 
 例如：事务 2 读取某个范围的数据，事务 1 在这个范围插入了新的数据，事务 2 再次读取这个范围的数据发现相比于第一次读取的结果多了新的数据。
 
-![幻读](./images/concurrency-consistency-issues-phantom-read.png)
+![幻读](https://pics-cloud.oss-cn-beijing.aliyuncs.com/202303122239027.png)
 
 ### 不可重复读和幻读有什么区别？
 
@@ -537,7 +537,7 @@ SELECT ... FOR UPDATE;
 
 《MySQL 技术内幕 InnoDB 存储引擎》这本书对应的描述应该是笔误了。
 
-![](https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/github/javaguide/mysql/image-20220511171419081.png)
+![](https://pics-cloud.oss-cn-beijing.aliyuncs.com/202303122239057.png)
 
 ### 当前读和快照读有什么区别？
 
@@ -617,7 +617,7 @@ CREATE TABLE `sequence_id` (
 
 可以选择使用云服务厂商提供的开箱即用的文件存储服务，成熟稳定，价格也比较低。
 
-![](https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/github/javaguide/mysql/oss-search.png)
+![](https://pics-cloud.oss-cn-beijing.aliyuncs.com/202303122239782.png)
 
 也可以选择自建文件存储服务，实现起来也不难，基于 FastDFS、MinIO（推荐） 等开源项目就可以实现分布式文件服务。
 
@@ -640,7 +640,7 @@ MySQL 提供了两个方法来处理 ip 地址
 
 [《Java 面试指北》(付费)](https://javaguide.cn/zhuanlan/java-mian-shi-zhi-bei.html) 的 **「技术面试题篇」** 有一篇文章详细介绍了常见的 SQL 优化手段，非常全面，清晰易懂！
 
-![常见的 SQL 优化手段](https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/javamianshizhibei/javamianshizhibei-sql-optimization.png)
+![常见的 SQL 优化手段](https://pics-cloud.oss-cn-beijing.aliyuncs.com/202303122240382.png)
 
 ### 如何分析 SQL 的性能？
 

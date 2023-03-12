@@ -15,7 +15,7 @@ NoSQL（Not Only SQL 的缩写）泛指非关系型的数据库，主要针对�
 
 NoSQL 数据库代表：HBase 、Cassandra、MongoDB、Redis。
 
-![](https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/github/javaguide/database/mongodb/sql-nosql-tushi.png)
+![](https://pics-cloud.oss-cn-beijing.aliyuncs.com/202303122247459.png)
 
 ## SQL 和 NoSQL 有什么区别？
 
@@ -50,7 +50,7 @@ NoSQL 数据库主要可以分为下面四种类型：
 
 下面这张图片来源于 [微软的官方文档 | 关系数据与 NoSQL 数据](https://learn.microsoft.com/en-us/dotnet/architecture/cloud-native/relational-vs-nosql-data)。
 
-![NoSQL 数据模型](https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/github/javaguide/database/mongodb/types-of-nosql-datastores.png)
+![NoSQL 数据模型](https://pics-cloud.oss-cn-beijing.aliyuncs.com/202303122247223.png)
 
 ## 参考
 
