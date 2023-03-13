@@ -44,7 +44,7 @@ Spring5.x 版本中 Web 模块的 Portlet 组件已经被废弃掉，同时增�
 
 Spring 各个模块的依赖关系如下：
 
-![Spring 各个模块的依赖关系](https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/github/javaguide/system-design/framework/spring/20200902100038.png)
+![Spring 各个模块的依赖关系](https://pics-cloud.oss-cn-beijing.aliyuncs.com/20200902100038.png)
 
 #### Core Container
 
