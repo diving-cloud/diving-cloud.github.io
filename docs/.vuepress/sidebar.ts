@@ -1,8 +1,8 @@
-import { sidebar } from "vuepress-theme-hope";
-import { highQualityTechnicalArticles } from "./sidebar/high-quality-technical-articles";
-import { aboutTheAuthor } from "./sidebar/about-the-author";
-import { books } from "./sidebar/books";
-import { openSourceProject } from "./sidebar/open-source-project";
+import {sidebar} from "vuepress-theme-hope";
+import {highQualityTechnicalArticles} from "./sidebar/high-quality-technical-articles";
+import {aboutTheAuthor} from "./sidebar/about-the-author";
+import {books} from "./sidebar/books";
+import {openSourceProject} from "./sidebar/open-source-project";
 
 export const sidebarConfig = sidebar({
   // 应该把更精确的路径放置在前边
@@ -336,8 +336,20 @@ export const sidebarConfig = sidebar({
             },
           ],
         },
+        {
+          text: "Netty",
+          icon: "bxl-spring-boot",
+          collapsible: true,
+          prefix: "netty/",
+          children: [
+            "netty",
+            "Netty01-nio",
+            "Netty02-入门",
+            "Netty03-进阶",
+            "Netty04-优化与源码",
+          ],
+        },
         "mybatis/mybatis-interview",
-        "netty",
       ],
     },
     {
