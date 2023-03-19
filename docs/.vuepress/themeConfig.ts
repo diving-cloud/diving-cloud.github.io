@@ -6,7 +6,7 @@ export const themeConfig = hopeTheme({
   logo: "/logo.png",
   hostname: "https://javaguide.cn/",
   author: {
-    name: "Guide",
+    name: "winter",
     url: "https://javaguide.cn/article/",
   },
   repo: "https://github.com/diving-cloud/diving-cloud.github.io",
@@ -26,14 +26,7 @@ export const themeConfig = hopeTheme({
   blog: {
     intro: "/about-the-author/",
     sidebarDisplay: "mobile",
-    medias: {
-      Zhihu: "https://www.zhihu.com/people/javaguide",
-      Github: "https://github.com/Snailclimb",
-      Gitee: "https://gitee.com/SnailClimb",
-    },
   },
-  footer:
-    '<a href="https://beian.miit.gov.cn/" target="_blank">鄂ICP备2020015769号-1</a>',
   displayFooter: true,
   plugins: {
     blog: true,
