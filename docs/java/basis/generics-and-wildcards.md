@@ -5,36 +5,117 @@ tag:
   - Java基础
 ---
 
-**泛型&通配符** 相关的面试题为我的[知识星球](https://www.yuque.com/docs/share/8a30ffb5-83f3-40f9-baf9-38de68b906dc)（点击链接即可查看详细介绍以及加入方法）专属内容，已经整理到了[《Java 面试指北》](https://www.yuque.com/docs/share/f37fc804-bfe6-4b0d-b373-9c462188fec7)（点击链接即可查看详细介绍以及获取方法）中。
+## 通配符
 
-[《Java 面试指北》](https://www.yuque.com/docs/share/f37fc804-bfe6-4b0d-b373-9c462188fec7) 的部分内容展示如下，你可以将其看作是 [JavaGuide](https://javaguide.cn/#/) 的补充完善，两者可以配合使用。
+### 什么是通配符？有什么作用？
 
-![](https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/xingqiu/image-20220304102536445.png)
+泛型类型是固定的，某些场景下使用起来不太灵活，于是，通配符就来了！通配符可以允许类型参数变化，用来解决泛型无法协变的问题。
 
-[《Java 面试指北》](https://www.yuque.com/docs/share/f37fc804-bfe6-4b0d-b373-9c462188fec7)只是星球内部众多资料中的一个，星球还有很多其他优质资料比如[专属专栏](https://javaguide.cn/zhuanlan/)、Java 编程视频、PDF 资料。
+举个例子：
 
-![](https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/xingqiu/image-20220211231206733.png)
+### 通配符 ？和常用的泛型 T 之间有什么区别？
 
-最近几年，市面上有越来越多的“技术大佬”开始办培训班/训练营，动辄成千上万的学费，却并没有什么干货，单纯的就是割韭菜。
+- T 可以用于声明变量或常量而 ? 不行。
 
-为了帮助更多同学准备 Java 面试以及学习 Java ，我创建了一个纯粹的[知识星球](https://www.yuque.com/docs/share/8a30ffb5-83f3-40f9-baf9-38de68b906dc)。虽然收费只有培训班/训练营的百分之一，但是[知识星球](https://www.yuque.com/docs/share/8a30ffb5-83f3-40f9-baf9-38de68b906dc)里的内容质量更高，提供的服务也更全面。
+- T 一般用于声明泛型类或方法，通配符 ? 一般用于泛型方法的调用代码和形参。
+- T 在编译期会被擦除为限定类型或 Object，通配符用于捕获具体类型。
 
-欢迎准备 Java 面试以及学习 Java 的同学加入我的[知识星球](https://www.yuque.com/docs/share/8a30ffb5-83f3-40f9-baf9-38de68b906dc)，干货非常多，学习氛围非常好！收费虽然是白菜价，但星球里的内容或许比你参加上万的培训班质量还要高。
+### 什么是无界通配符？
 
-下面是星球提供的部分服务（点击下方图片即可获取知识星球的详细介绍）：
+无界通配符可以接收任何泛型类型数据，用于实现不依赖于具体类型参数的简单方法，可以捕获参数类型并交由泛型方法进行处理。
+List<?> 和 List 有区别吗？** 当然有！
 
-<div align="center">
-  <a href="https://javaguide.cn/about-the-author/zhishixingqiu-two-years.html">
-    <img src="https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/xingqiu/xingqiufuwu.png" style="margin: 0 auto; " />
-  </a>
-</div>
+- List<?> list 表示 list 是持有某种特定类型的 List，但是不知道具体是哪种类型。因此，我们添加元素进去的时候会报错。
 
-我有自己的原则，不割韭菜，用心做内容，真心希望帮助到你！
+- List list 表示 list 是持有的元素的类型是 Object，因此可以添加任何类型的对象，只不过编译器会有警告信息。
+  ```java
+List<?> list = new ArrayList<>();
+list.add("sss");//报错
+List list2 = new ArrayList<>();
+list2.add("sss");//警告信息
 
-如果你感兴趣的话，不妨花 3 分钟左右看看星球的详细介绍： [JavaGuide 知识星球详细介绍](https://www.yuque.com/docs/share/8a30ffb5-83f3-40f9-baf9-38de68b906dc)（文末有优惠券）。
+### 什么是上边界通配符？什么是下边界通配符？
 
-<div align="center">
-  <a href="https://javaguide.cn/about-the-author/zhishixingqiu-two-years.html">
-    <img src="https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/xingqiu/xingqiuyouhuijuanheyi.png" style="margin: 0 auto; " />
-  </a>
-</div>
+在使用泛型的时候，我们还可以为传入的泛型类型实参进行上下边界的限制，如：**类型实参只准传入某种类型的父类或某种类型的子类**。
+
+**上边界通配符 extends** 可以实现泛型的向上转型即传入的类型实参必须是指定类型的子类型。
+
+举个例子：
+
+```java
+// 限制类型为 Person 的子类
+<? extends Person>
+// 限制类型为 Manager 的父类
+<? super Manager>
+```
+
+类型边界可以设置多个，还可以对 T 类型进行限制。
+
+**下边界通配符 super** 与上边界通配符 extends刚好相反，它可以实现泛型的向下转型即传入的类型实参必须是指定类型的父类型。
+
+举个例子：
+
+```java
+//  限制必须是 Employee 类的父类
+List<? super Employee>
+```
+
+**? extends xxx 和 ? super xxx 有什么区别?**
+
+两者接收参数的范围不同。并且，使用 ? extends xxx 声明的泛型参数只能调用 get() 方法返回 xxx 类型，调用 set() 报错。使用 ? super xxx 声明的泛型参数只能调用 set() 方法接收 xxx 类型，调用 get() 报错。
+
+**T extends xxx 和 ? extends xxx 又有什么区别？**
+
+T extends xxx 用于定义泛型类和方法，擦除后为 xxx 类型， ? extends xxx 用于声明方法形参，接收 xxx 和其子类型。
+
+**Class<?> 和 Class 的区别？**
+
+直接使用 Class 的话会有一个类型警告，使用 Class<?> 则没有，因为 Class 是一个泛型类，接收原生类型会产生警告
+
+
+### 以下代码是否能编译，为什么？
+```java
+class Shape { /* ... */ }
+class Circle extends Shape { /* ... */ }
+class Rectangle extends Shape { /* ... */ }
+
+class Node<T> { /* ... */ }
+
+Node<Circle> nc = new Node<>();
+Node<Shape>  ns = nc;
+```
+
+不能，因为`Node<Circle>`不是`<Shape>`的子类
+
+```java
+class Shape { /* ... */ }
+class Circle extends Shape { /* ... */ }
+class Rectangle extends Shape { /* ... */ }
+
+class Node<T> { /* ... */ }
+class ChildNode<T> extends Node<T>{
+
+}
+ChildNode<Circle> nc = new ChildNode<>();
+Node<Circle>  ns = nc;
+```
+
+可以编译，`ChildNode<Circle>`是`Node<Circle>`的子类
+
+```java
+public static void print(List<? extends Number> list) {
+    for (Number n : list)
+        System.out.print(n + " ");
+    System.out.println();
+}
+```
+
+可以编译，`List<? extends Number>` 可以往外取元素，但是无法调用 add() 添加元素。
+## 参考
+
+- Java 官方文档 ： https://docs.oracle.com/javase/tutorial/java/generics/index.html
+- Java 基础 一文搞懂泛型：https://www.cnblogs.com/XiiX/p/14719568.html
+
+
+
+
