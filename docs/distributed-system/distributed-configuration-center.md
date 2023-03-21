@@ -1,5 +1,5 @@
 ---
-title: 分布式配置中心详解(付费)
+title: 分布式配置中心详解
 category: 分布式
 icon: "configuration"
 ---
