@@ -431,7 +431,7 @@ MVC 是模型(Model)、视图(View)、控制器(Controller)的简写，其核心
 
 这个模式下 JSP 即是控制层（Controller）又是表现层（View）。显而易见，这种模式存在很多问题。比如控制逻辑和表现逻辑混杂在一起，导致代码重用率极低；再比如前端和后端相互依赖，难以进行测试维护并且开发效率极低。
 
-![mvc-mode1](https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/java-guide-blog/mvc-mode1.png)
+![mvc-mode1](https://pics-cloud.oss-cn-beijing.aliyuncs.com/mvc-mode1.png)
 
 **Model 2 时代**
 
