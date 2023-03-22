@@ -15,7 +15,7 @@ head:
 
 我有一个朋友做了一个小破站，现在要实现一个站内信 Web 消息推送的功能，对，就是下图这个小红点，一个很常用的功能。
 
-![站内信 Web 消息推送](https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/github/javaguide/system-design/web-real-time-message-push/1460000042192380.png)
+![站内信 Web 消息推送](https://pics-cloud.oss-cn-beijing.aliyuncs.com/1460000042192380-20230322210951307.png)
 
 不过他还没想好用什么方式做，这里我帮他整理了一下几种方案，并简单做了实现。
 
@@ -39,7 +39,7 @@ Web 端消息推送示例：
 
 通常在服务端会有若干张消息推送表，用来记录用户触发不同事件所推送不同类型的消息，前端主动查询（拉）或者被动接收（推）用户所有未读的消息数。
 
-![消息推送表](https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/github/javaguide/system-design/web-real-time-message-push/1460000042192384.png)
+![消息推送表](https://pics-cloud.oss-cn-beijing.aliyuncs.com/1460000042192384.png)
 
 消息推送无非是推（push）和拉（pull）两种形式，下边我们逐个了解下。
 
