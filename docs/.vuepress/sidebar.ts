@@ -381,7 +381,7 @@ export const sidebarConfig = sidebar({
           children: [
             "basis-of-authority-certification",
             "jwt-intro",
-            "advantages&disadvantages-of-jwt",
+            "advantages-disadvantages-of-jwt",
             "sso-intro",
             "design-of-authority-system",
             "sentive-words-filter",
