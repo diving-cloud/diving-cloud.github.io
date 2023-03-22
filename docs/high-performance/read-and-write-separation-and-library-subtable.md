@@ -63,7 +63,7 @@ hintManager.setMasterRouteOnly();
 
 **1.代理方式**
 
-![代理方式实现读写分离](https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/github/javaguide/high-performance/read-and-write-separation-and-library-subtable/read-and-write-separation-proxy.png)
+![代理方式实现读写分离](https://pics-cloud.oss-cn-beijing.aliyuncs.com/read-and-write-separation-proxy.png)
 
 我们可以在应用和数据中间加了一个代理层。应用程序所有的数据请求都交给代理层处理，代理层负责分离读写请求，将它们路由到对应的数据库中。
 
@@ -83,7 +83,7 @@ MySQL binlog(binary log 即二进制日志文件) 主要记录了 MySQL 数据�
 
 更具体和详细的过程是这个样子的（图片来自于：[《MySQL Master-Slave Replication on the Same Machine》](https://www.toptal.com/mysql/mysql-master-slave-replication-tutorial)）：
 
-![MySQL主从复制](https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/java-guide-blog/78816271d3ab52424bfd5ad3086c1a0f.png)
+![MySQL主从复制](https://pics-cloud.oss-cn-beijing.aliyuncs.com/78816271d3ab52424bfd5ad3086c1a0f.png)
 
 1. 主库将数据库中数据的变化写入到 binlog
 2. 从库连接主库
@@ -122,13 +122,13 @@ MySQL binlog(binary log 即二进制日志文件) 主要记录了 MySQL 数据�
 
 举个例子：说你将数据库中的用户表、订单表和商品表分别单独拆分为用户数据库、订单数据库和商品数据库。
 
-![垂直分库](./images/read-and-write-separation-and-library-subtable/vertical-slicing-database.png)
+![垂直分库](https://pics-cloud.oss-cn-beijing.aliyuncs.com/vertical-slicing-database.png)
 
 **水平分库** 是把同一个表按一定规则拆分到不同的数据库中，每个库可以位于不同的服务器上，这样就实现了水平扩展，解决了单表的存储和性能瓶颈的问题。
 
 举个例子：订单表数据量太大，你对订单表进行了水平切分（水平分表），然后将切分后的 2 张订单表分别放在两个不同的数据库。
 
-![水平分库](./images/read-and-write-separation-and-library-subtable/horizontal-slicing-database.png)
+![水平分库](https://pics-cloud.oss-cn-beijing.aliyuncs.com/horizontal-slicing-database.png)
 
 ### 什么是分表？
 
@@ -181,7 +181,7 @@ MySQL binlog(binary log 即二进制日志文件) 主要记录了 MySQL 数据�
 
 ShardingSphere 项目（包括 Sharding-JDBC、Sharding-Proxy 和 Sharding-Sidecar）是当当捐入 Apache 的，目前主要由京东数科的一些巨佬维护。
 
-![](https://img-blog.csdnimg.cn/img_convert/60649996bfc69acb1953063dddf0c2e6.png)
+![](https://pics-cloud.oss-cn-beijing.aliyuncs.com/60649996bfc69acb1953063dddf0c2e6.jpeg)
 
 ShardingSphere 绝对可以说是当前分库分表的首选！ShardingSphere 的功能完善，除了支持读写分离和分库分表，还提供分布式事务、数据库治理等功能。
 

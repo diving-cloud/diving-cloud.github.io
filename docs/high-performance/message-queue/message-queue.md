@@ -13,11 +13,11 @@ tag:
 
 我们可以把消息队列看作是一个存放消息的容器，当我们需要使用消息的时候，直接从容器中取出消息供自己使用即可。由于队列 Queue 是一种先进先出的数据结构，所以消费消息时也是按照顺序来消费的。
 
-![Message queue](https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/message-queue-small.png)
+![Message queue](https://pics-cloud.oss-cn-beijing.aliyuncs.com/message-queue-small.png)
 
 参与消息传递的双方称为 **生产者** 和 **消费者** ，生产者负责发送消息，消费者负责处理消息。
 
-![发布/订阅（Pub/Sub）模型](../images/message-queue/message-queue-pub-sub-model.png)
+![发布/订阅（Pub/Sub）模型](https://pics-cloud.oss-cn-beijing.aliyuncs.com/message-queue-pub-sub-model.png)
 
 我们知道操作系统中的进程通信的一种很重要的方式就是消息队列。我们这里提到的消息队列稍微有点区别，更多指的是各个服务以及系统内部各个组件/模块之前的通信，属于一种 **中间件** 。
 
@@ -45,7 +45,7 @@ tag:
 
 ### 通过异步处理提高系统性能（减少响应所需时间）
 
-![通过异步处理提高系统性能](https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019-11/Asynchronous-message-queue.png)
+![通过异步处理提高系统性能](https://pics-cloud.oss-cn-beijing.aliyuncs.com/Asynchronous-message-queue.png)
 
 将用户的请求数据存储到消息队列之后就立即返回结果。随后，系统再对消息进行消费。
 
@@ -57,13 +57,13 @@ tag:
 
 举例：在电子商务一些秒杀、促销活动中，合理使用消息队列可以有效抵御促销活动刚开始大量订单涌入对系统的冲击。如下图所示：
 
-![削峰](https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019-11/削峰-消息队列.png)
+![削峰](https://pics-cloud.oss-cn-beijing.aliyuncs.com/%E5%89%8A%E5%B3%B0-%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97.png)
 
 ### 降低系统耦合性
 
 使用消息队列还可以降低系统耦合性。我们知道如果模块之间不存在直接调用，那么新增模块或者修改模块就对其他模块影响较小，这样系统的可扩展性无疑更好一些。还是直接上图吧：
 
-![解耦](https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019-11/消息队列-解耦.png)
+![解耦](https://pics-cloud.oss-cn-beijing.aliyuncs.com/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97-%E8%A7%A3%E8%80%A6.png)
 
 生产者（客户端）发送消息到消息队列中去，接受者（服务端）处理消息，需要消费的系统直接去消息队列取消息进行消费即可而不需要和其他系统有耦合，这显然也提高了系统的扩展性。
 
@@ -83,7 +83,7 @@ RocketMQ 、 Kafka、Pulsar 、QMQ 都提供了事务相关的功能。事务允
 
 详细介绍可以查看 [分布式事务详解(付费)](https://javaguide.cn/distributed-system/distributed-transaction.html) 这篇文章。
 
-![分布式事务详解 - MQ事务](https://img-blog.csdnimg.cn/img_convert/07b338324a7d8894b8aef4b659b76d92.png)
+![分布式事务详解 - MQ事务](https://pics-cloud.oss-cn-beijing.aliyuncs.com/07b338324a7d8894b8aef4b659b76d92.png)
 
 ## 使用消息队列会带来哪些问题？
 
@@ -111,13 +111,13 @@ JMS 定义了五种不同的消息正文格式以及调用的消息类型，允�
 
 #### 点到点（P2P）模型
 
-![队列模型](../images/message-queue/message-queue-queue-model.png)
+![队列模型](https://pics-cloud.oss-cn-beijing.aliyuncs.com/message-queue-queue-model.png)
 
 使用**队列（Queue）**作为消息通信载体；满足**生产者与消费者模式**，一条消息只能被一个消费者使用，未被消费的消息在队列中保留直到被消费或超时。比如：我们生产者发送 100 条消息的话，两个消费者来消费一般情况下两个消费者会按照消息发送的顺序各自消费一半（也就是你一个我一个的消费。）
 
 #### 发布/订阅（Pub/Sub）模型
 
-![发布/订阅（Pub/Sub）模型](../images/message-queue/message-queue-pub-sub-model.png)
+![发布/订阅（Pub/Sub）模型](https://pics-cloud.oss-cn-beijing.aliyuncs.com/message-queue-pub-sub-model.png)
 
 发布订阅模型（Pub/Sub） 使用**主题（Topic）**作为消息通信载体，类似于**广播模式**；发布者发布一条消息，该消息通过主题传递给所有的订阅者，**在一条消息广播之后才订阅的用户则是收不到该条消息的**。
 
@@ -160,7 +160,7 @@ RPC 和消息队列本质上是网络通讯的两种不同的实现机制，两�
 
 #### Kafka
 
-![](https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/github/javaguide/high-performance/message-queue/kafka-logo.png)
+![](https://pics-cloud.oss-cn-beijing.aliyuncs.com/kafka-logo.png)
 
 Kafka 是 LinkedIn 开源的一个分布式流式处理平台，已经成为 Apache 顶级项目，早期被用来用于处理海量的日志，后面才慢慢发展成了一款功能全面的高性能消息队列。
 
@@ -176,7 +176,7 @@ Kafka 是一个分布式系统，由通过高性能 TCP 网络协议进行通信
 
 不过，要提示一下：**如果要使用 KRaft 模式的话，建议选择较高版本的 Kafka，因为这个功能还在持续完善优化中。Kafka 3.3.1 版本是第一个将 KRaft（Kafka Raft）共识协议标记为生产就绪的版本。**
 
-![](https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/github/javaguide/high-performance/message-queue/kafka3.3.1-kraft-%20production-ready.png)
+![](https://pics-cloud.oss-cn-beijing.aliyuncs.com/kafka3.3.1-kraft-%20production-ready.png)
 
 Kafka 官网：http://kafka.apache.org/
 
@@ -184,7 +184,7 @@ Kafka 更新记录（可以直观看到项目是否还在维护）：https://kaf
 
 #### RocketMQ
 
-![](https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/github/javaguide/high-performance/message-queue/rocketmq-logo.png)
+![](https://pics-cloud.oss-cn-beijing.aliyuncs.com/rocketmq-logo.png)
 
 RocketMQ 是阿里开源的一款云原生“消息、事件、流”实时数据处理平台，借鉴了 Kafka，已经成为 Apache 顶级项目。
 
@@ -207,7 +207,7 @@ RocketMQ 更新记录（可以直观看到项目是否还在维护）：https://
 
 #### RabbitMQ
 
-![](https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/github/javaguide/high-performance/message-queue/rabbitmq-logo.png)
+![](https://pics-cloud.oss-cn-beijing.aliyuncs.com/rabbitmq-logo.png)
 
 RabbitMQ 是采用 Erlang 语言实现 AMQP(Advanced Message Queuing Protocol，高级消息队列协议）的消息中间件，它最初起源于金融系统，用于在分布式系统中存储转发消息。
 
@@ -228,7 +228,7 @@ RabbitMQ 更新记录（可以直观看到项目是否还在维护）：https://
 
 #### Pulsar
 
-![](https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/github/javaguide/high-performance/message-queue/pulsar-logo.png)
+![](https://pics-cloud.oss-cn-beijing.aliyuncs.com/pulsar-logo.png)
 
 Pulsar 是下一代云原生分布式消息流平台，最初由 Yahoo 开发 ，已经成为 Apache 顶级项目。
 
