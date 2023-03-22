@@ -278,7 +278,7 @@ JVM 这部分内容主要参考 [JVM 虚拟机规范-Java8 ](https://docs.oracle
 
 - [认证授权基础概念详解](./system-design/security/basis-of-authority-certification.md)
 - [JWT 基础概念详解](./system-design/security/jwt-intro.md)
-- [JWT 优缺点分析以及常见问题解决方案](./system-design/security/advantages&disadvantages-of-jwt.md)
+- [JWT 优缺点分析以及常见问题解决方案](./system-design/security/advantages-disadvantages-of-jwt.md)
 - [SSO 单点登录详解](./system-design/security/sso-intro.md)
 - [权限系统设计详解](./system-design/security/design-of-authority-system.md)
 
